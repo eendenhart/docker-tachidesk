@@ -75,7 +75,7 @@ jobs:
           
       - name: Build and push stable ubuntu
         id: docker_build_release_ubuntu
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           file: scripts/dockerfiles/Test_Git_Actions-Dockerfile
           platforms: ${{ env.build_base_image_temurin_platform }}
@@ -99,7 +99,7 @@ jobs:
 
       - name: Build and push stable alpine
         id: docker_build_release_alpine
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           file: scripts/dockerfiles/Test_Git_Actions-Dockerfile
           platforms: ${{ env.build_base_image_alpine_platform }}
