@@ -2,9 +2,7 @@ FROM eclipse-temurin:11-jre-focal
 
 RUN useradd --uid 99 --gid users --no-log-init suwayomi;
 
-RUN mkdir -p /home/suwayomi && chown -R suwayomi:suwayomi /home/suwayomi
-
-USER suwayomi
+RUN mkdir -p /home/suwayomi && chown -R 99:100 /home/suwayomi
 
 WORKDIR /home/suwayomi
 
